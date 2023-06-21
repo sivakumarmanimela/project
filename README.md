@@ -1,13 +1,14 @@
-# Concept Bootstrap 4 Admin Dashboard Template
-**Concept** is a responsive Bootstrap 4 admin template. It provides you with a collection of ready to use code snippets and utilities, custom pages, loads of charts, 4 different dashboard variations, a collection of applications and some useful widgets. Preview of this awesome admin template available here: https://colorlib.com/polygon/concept/index.html
+# MULTI-STATE CO-OPERATION SOCIETIES
+**MSCS** is a responsive Bootstrap 4 admin template. It provides you with a collection of ready to use code snippets and utilities, custom pages, loads of charts, 4 different dashboard variations, a collection of applications and some useful widgets. Preview of this awesome admin template available here:  https://sivakumarmanimela.github.io/project/
 
 # Preview
 
 ### Screenshot
 
-![Concept admin dashboard template preview](https://colorlib.com/wp/wp-content/uploads/sites/2/concept-free-admin-dashboard-panel.jpg)
+![MSCS admin dashboard template preview]![Screenshot (118)](https://github.com/sivakumarmanimela/project/assets/118118454/032f3994-6391-47a2-8d5a-bc69955bf59e)
 
-### Demo Site: [[Here]](https://colorlib.com/polygon/concept/index.html)
+
+### Demo Site: [[Here]](https://sivakumarmanimela.github.io/project/)
 
 ### TOC
 - [Built With](#built-with)
@@ -42,21 +43,6 @@
 - mockjax
 - lobibox
 - summernote
-- editable
 
-### Changelog
-#### V 1.0.0
-Initial Release
-### Authors
-[Colorlib](https://colorlib.com)
 
-### More info
-- [Bootstrap dashboards](https://colorlib.com/wp/free-bootstrap-admin-dashboard-templates/)
-- [Free Admin Templates](https://colorlib.com/wp/free-admin-templates/)
-- [Free HTML templates](https://colorlib.com/wp/free-html-website-templates/)
-- [Bootstrap Templates](https://colorlib.com/wp/templates/)
-- [Free WordPress Themes](https://colorlib.com/wp/free-wordpress-themes/)
 
-### License
-
-Concept is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the final products. But you always need to state that Colorlib is the original author of this template.

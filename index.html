@@ -1,0 +1,941 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <title>MULTI-STATE CO-OPERATIVE SOCIETIES</title>
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <img src="data:image/jpeg;base64,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" width="100" />
+                <a class="navbar-brand" href="index.html">MULTI-STATE CO-OPERATIVE SOCIETIES </br><h4>Ministry of Cooperation, Govt. of India</h4> </a> 
+                
+                <img src="https://mscs.dac.gov.in/images/MSCS_LOGO.png" width="100" / >
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-2.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jeremy Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-3.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">John Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-4.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Monaan Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="assets/images/avatar-5.jpg" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span class="notification-list-user-name">Jessica Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown connection">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                            <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+                                <li class="connection-list">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/github.png" alt="" > <span>Github</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/dribbble.png" alt="" > <span>Dribbble</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/dropbox.png" alt="" > <span>Dropbox</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/bitbucket.png" alt=""> <span>Bitbucket</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/mail_chimp.png" alt="" ><span>Mail chimp</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="assets/images/slack.png" alt="" > <span>Slack</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="conntection-footer"><a href="#">More</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end navbar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- left sidebar -->
+        <!-- ============================================================== -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <div id="submenu-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1-2" aria-controls="submenu-1-2">E-Commerce</a>
+                                            <div id="submenu-1-2" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="index.html">MULTI-STATE CO-OPERATIVE SOCIETIES</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI Elements</a>
+                                <div id="submenu-2" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/cards.html">Cards <span class="badge badge-secondary">New</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/general.html">General</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/carousel.html">Carousel</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/listgroup.html">List Group</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/typography.html">Typography</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/accordions.html">Accordions</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/tabs.html">Tabs</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-3" aria-controls="submenu-3"><i class="fas fa-fw fa-chart-pie"></i>Chart</a>
+                                <div id="submenu-3" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/chart-c3.html">C3 Charts</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/chart-chartist.html">Chartist Charts</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/chart-charts.html">Chart</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/chart-morris.html">Morris</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/chart-sparkline.html">Sparkline</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/chart-gauge.html">Guage</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Forms</a>
+                                <div id="submenu-4" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/form-elements.html">Form Elements</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/form-validation.html">Parsely Validations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/multiselect.html">Multiselect</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/datepicker.html">Date Picker</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/bootstrap-select.html">Bootstrap Select</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Tables</a>
+                                <div id="submenu-5" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="https://docs.google.com/spreadsheets/d/1eukZhvcfnRJ2TvvR9Jx3U08FOYFdXYyKRrQssmoZmh4/edit#gid=0" Target="_blank">Data Tables</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-divider">
+                                Features
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Pages </a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/blank-page.html">Blank Page</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/blank-page-header.html">Blank Page Header</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/login.html">Login</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/404-page.html">404 page</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/sign-up.html">Sign up Page</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/forgot-password.html">Forgot Password</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/pricing.html">Pricing Tables</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/timeline.html">Timeline</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/calendar.html">Calendar</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/sortable-nestable-lists.html">Sortable/Nestable List</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/widgets.html">Widgets</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/media-object.html">Media Objects</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/cropper-image.html">Cropper</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/color-picker.html">Color Picker</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-7" aria-controls="submenu-7"><i class="fas fa-fw fa-inbox"></i>Apps <span class="badge badge-secondary">New</span></a>
+                                <div id="submenu-7" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/inbox.html">Inbox</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/email-details.html">Email Detail</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/email-compose.html">Email Compose</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/message-chat.html">Message Chat</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-8" aria-controls="submenu-8"><i class="fas fa-fw fa-columns"></i>Icons</a>
+                                <div id="submenu-8" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/icon-fontawesome.html">FontAwesome Icons</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/icon-material.html">Material Icons</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/icon-simple-lineicon.html">Simpleline Icon</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/icon-themify.html">Themify Icon</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/icon-flag.html">Flag Icons</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/icon-weather.html">Weather Icon</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+                                <div id="submenu-9" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/map-google.html">Google Maps</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/map-vector.html">Vector Maps</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-10" aria-controls="submenu-10"><i class="fas fa-f fa-folder"></i>Menu Level</a>
+                                <div id="submenu-10" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Level 1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-11" aria-controls="submenu-11">Level 2</a>
+                                            <div id="submenu-11" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Level 1</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="#">Level 2</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#">Level 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- end left sidebar -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- wrapper  -->
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header">
+                                <h2 class="pageheader-title">Ministry of Cooperation, Govt. of India </h2>
+                                <p class="pageheader-text">Nulla euismod urna eros, sit amet scelerisque torton lectus vel mauris facilisis faucibus at enim quis massa lobortis rutrum.</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Ministry of Cooperation, Govt. of India</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p> <b>An Act to consolidate and amend the law relating to co-operative societies, with objects not confined to one State and serving the interests of members in more than one State, to facilitate the voluntary formation and democratic functioning of co-operatives as people's institutions based on self-help and mutual aid and to enable them to promote their economic and social betterment and to provide functional autonomy ,was being felt necessary by the various cooperative societies, and federation of various cooperative societies as well as by the Government. In order to achieve the objective The Multi State Cooperative Societies Bill was introduced in the Parliament.The bill having been passed by both the Houses of Parliament received the assent of the President on 3rd July 2002 and it came on the Statute Book as The Multi State Cooperative Societies ACT 2002 (39 of 2002).</b></p>
+                    <img src="https://swaritadvisors.com/learning/wp-content/uploads/2020/09/Characteristics-of-Multi-State-Co-operative-Society-Registration.png" width="500" /> 
+                
+                    <img align="right" src="https://corpbiz.io/learning/wp-content/uploads/2021/01/The-Various-Types-of-Cooperative-Society.png" width="500" />
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+ 
+                            <!-- ============================================================== -->
+                      
+                            <!-- ============================================================== -->
+
+                                          <!-- recent orders  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Recent registrations</h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">S.NO</th>
+                                                        <th class="border-0">NAME OF SOCIETY</th>
+                                                        <th class="border-0">ADDRESS</th>
+                                                        <th class="border-0">STATE</th>
+                                                        <th class="border-0">DISTRICT</th>
+                                                        <th class="border-0">DATE OF REGISTRATION</th>
+                                                        <th class="border-0">AREA OF OPERATION</th>
+                                                        <th class="border-0">SECTOR TYPE</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>
+                                                            <P>saharayn universal multipurose society limited
+                                                            </P>
+                                                        </td>
+                                                        <td>At & P.O. Railway Colony, Gorakkhpur, District-Gorakhpur Uttar Pradesh
+                                                        </td>
+                                                        <td>UTTAR PRADESH
+                                                        </td>
+                                                        <td>KUSHI NAGAR
+                                                        </td>
+                                                        <td>13/10/2022</td>
+                                                        <td>Haryana, UttarPradesh, Himachal, Punjab
+                                                        </td>
+                                                        <td>Credit
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>
+                                                            <P>JMJ Multi State Agro Cooperative Society Ltd.
+                                                            </P>
+                                                        </td>
+                                                        <td>TC 48/1442-1, Sreeniva, Parekkati House, Chathankulangara Temple South, Puthurkkara, Ayyanthole, Thrissur 680003 Kerala
+                                                        </td>
+                                                        <td>KERALA
+                                                        </td>
+                                                        <td>IDUKKI</td>
+                                                        <td>13-10-2022
+                                                        </td>
+                                                        <td>Bihar, West bengal, Odisha
+                                                        </td>
+                                                        <td>Agro
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>
+                                                            <P>Mango Growers cooperative society Ltd. (MANCO)
+                                                            </P>
+                                                        </td>
+                                                        <td>Visakhapatnam
+                                                        </td>
+                                                        <td>ANDHRA PRADESH
+                                                        </td>
+                                                    
+                                                        <td>VISAKHAPATANAM
+                                                        </td>
+                                                        <td>10-08-2022
+                                                        </td>
+                                                        <td>Haryana, Delhi, UttarPradesh, 
+                                                        </td>
+                                                        <td>Agro	
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>
+                                                            <P>Green Safe Multi State Agriculture Cooperative Society Ltd.
+                                                            </P>
+                                                        </td>
+                                                        <td>Coimbatore, Tamil Nadu
+                                                        </td>
+                                                        <td>TAMIL NADU
+                                                        </td>
+                                                        <td>COIMBATORE
+                                                        </td>
+                                                        <td>12-08-2022
+                                                        </td>
+                                                        <td>Haryana, Delhi
+                                                        </td>
+                                                        <td>Agro	
+                                                        </td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end recent orders  -->
+
+    
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- customer acquistion  -->
+                            <!-- ============================================================== -->
+                            
+                            <!-- ============================================================== -->
+                            <!-- end customer acquistion  -->
+                            <!-- ============================================================== -->
+                        </div>
+                        <div class="row">
+                            <!-- ============================================================== -->
+              				                        <!-- product category  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header"> SECTOR TYPE</h5>
+                                    <div class="card-body">
+                                        <div class="ct-chart-category ct-golden-section" style="height: 315px;"></div>
+                                        <div class="text-center m-t-40">
+                                            <span class="legend-item mr-3">
+                                                    <span class="fa-xs text-primary mr-1 legend-tile"><i class="fa fa-fw fa-square-full "></i></span><span class="legend-text">AGRO</span>
+                                            </span>
+                                            <span class="legend-item mr-3">
+                                                <span class="fa-xs text-secondary mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
+                                            <span class="legend-text">COOPERATIVE BANK</span>
+                                            </span>
+                                            <span class="legend-item mr-3">
+                                                <span class="fa-xs text-info mr-1 legend-tile"><i class="fa fa-fw fa-square-full"></i></span>
+                                            <span class="legend-text">CREDIT</span>
+                                            </span>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end product category  -->
+                                   <!-- product sales  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <!-- <div class="float-right">
+                                                <select class="custom-select">
+                                                    <option selected>Today</option>
+                                                    <option value="1">Weekly</option>
+                                                    <option value="2">Monthly</option>
+                                                    <option value="3">Yearly</option>
+                                                </select>
+                                            </div> -->
+                                        <h5 class="mb-0"> LEVELS OF SECTORS</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="ct-chart-product ct-golden-section"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end product sales  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <!-- ============================================================== -->
+                                <!-- top perfomimg  -->
+                                <!-- ============================================================== -->
+                                <div class="card">
+                                    <h5 class="card-header">SUMMARY ON STATES</h5>
+                                    <div class="card-body p-0">
+                                        <div class="table-responsive">
+                                            <table class="table no-wrap p-table">
+                                                <thead class="bg-light">
+                                                    <tr class="border-0">
+                                                        <th class="border-0">STATE</th>
+                                                        <th class="border-0">DISTRICT</th>
+                                                        <th class="border-0">DATE OF JOINING</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>ANDHRA PRADESH</td>
+                                                        <td>WEST GODAVRI </td>
+                                                        <td>16/01/2020</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>TELANGANA</td>
+                                                        <td>ADILABAD </td>
+                                                        <td>12/12/2019</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>TAMILNADU</td>
+                                                        <td>DHARMAPURI </td>
+                                                        <td>06/12/2019</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>BIHAR</td>
+                                                        <td>PATNA </td>
+                                                        <td>03/10/2018</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>NEW DELHI</td>
+                                                        <td>NEW DELHI</td>
+                                                        <td>27/09/2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>MAHARASTRA</td>
+                                                        <td>NAGPUR</td>
+                                                        <td>26/09/2016</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3">
+                                                            <a href="#" class="btn btn-outline-light float-right">Details</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end top perfomimg  -->
+                                <!-- ============================================================== -->
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <!-- ============================================================== -->
+                            <!-- sales  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">NO OF STATES</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">29</h1>
+                                        </div>
+                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end sales  -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- new customer  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">SECTOR TYPES</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">12</h1>
+                                        </div>
+                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end new customer  -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- visitor  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">NUMBER OF DISTRICTS</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">100</h1>
+                                        </div>
+                                        <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                            <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end visitor  -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- total orders  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">NUMBER OF REGISTRATIONS</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">100</h1>
+                                        </div>
+                                        <div class="metric-label d-inline-block float-right text-sucess font-weight-bold">
+                                            <span class="icon-circle-small icon-box-xs text-sucess bg-sucess-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end total orders  -->
+                            <!-- ============================================================== -->
+                        </div>
+                        <div class="row">
+                            <!-- ============================================================== -->
+                            <!-- total revenue  -->
+                            <!-- ============================================================== -->
+  
+                            
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- category revenue  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">STATE WISE REGISTRATIONS</h5>
+                                    <div class="card-body">
+                                        <div id="c3chart_category" style="height: 420px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end category revenue  -->
+                            <!-- ============================================================== -->
+
+                            <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header"> Total Registrations</h5>
+                                    <div class="card-body">
+                                        <div id="morris_totalrevenue"></div>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="display-7 font-weight-bold"><span class="text-primary d-inline-block"></span><span class="text-success float-right"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <!-- ============================================================== -->
+                                <!-- social source  -->
+                                <!-- ============================================================== -->
+                                <div class="card">
+                                    <h5 class="card-header">FOLLOWERS ON SOCIAL MEDIA</h5>
+                                    <div class="card-body p-0">
+                                        <ul class="social-sales list-group list-group-flush">
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle facebook-bgcolor mr-2"><i class="fab fa-facebook-f"></i></span><span class="social-sales-name">Facebook</span><span class="social-sales-count text-dark">120K Followers</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle twitter-bgcolor mr-2"><i class="fab fa-twitter"></i></span><span class="social-sales-name">Twitter</span><span class="social-sales-count text-dark">99k Followers</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle instagram-bgcolor mr-2"><i class="fab fa-instagram"></i></span><span class="social-sales-name">Instagram</span><span class="social-sales-count text-dark">76k Followers</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle pinterest-bgcolor mr-2"><i class="fab fa-pinterest-p"></i></span><span class="social-sales-name">Pinterest</span><span class="social-sales-count text-dark">56k Followers</span>
+                                            </li>
+                                            <li class="list-group-item social-sales-content"><span class="social-sales-icon-circle googleplus-bgcolor mr-2"><i class="fab fa-google-plus-g"></i></span><span class="social-sales-name">Google Plus</span><span class="social-sales-count text-dark">36k Follwers</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <a href="#" class="btn-primary-link">View Details</a>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end social source  -->
+                                <!-- ============================================================== -->
+                            </div>
+                            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <!-- ============================================================== -->
+                                <!-- sales traffice source  -->
+                                <!-- ============================================================== -->
+                                <div class="card">
+                                    <h5 class="card-header"> State Progress</h5>
+                                    <div class="card-body p-0">
+                                        <ul class="traffic-sales list-group list-group-flush">
+                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">MAHARASTRA</span><span class="traffic-sales-amount">$4000.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
+                                            </li>
+                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">UTTAR PRADESH<span class="traffic-sales-amount">$3123.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
+                                                </span>
+                                            </li>
+                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">TAMILNADU<span class="traffic-sales-amount ">$3099.00  <span class="icon-circle-small icon-box-xs text-success ml-4 bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1 text-success">5.86%</span></span>
+                                                </span>
+                                            </li>
+                                            <li class="traffic-sales-content list-group-item"><span class="traffic-sales-name">KERALA<span class="traffic-sales-amount ">$2220.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">4.02%</span></span>
+                                                </span>
+                                            </li>
+                                            <li class="traffic-sales-content list-group-item "><span class="traffic-sales-name">TELANGANA<span class="traffic-sales-amount">$1567.00   <span class="icon-circle-small icon-box-xs text-danger ml-4 bg-danger-light"><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1 text-danger">3.86%</span></span>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <a href="#" class="btn-primary-link">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end sales traffice source  -->
+                            <!-- ============================================================== -->
+                            <!-- ============================================================== -->
+                            <!-- sales traffic country source  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-3 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">Coordination with other Countries</h5>
+                                    <div class="card-body p-0">
+                                        <ul class="country-sales list-group list-group-flush">
+                                            <li class="country-sales-content list-group-item"><span class="mr-2"><i class="flag-icon flag-icon-us" title="us" id="us"></i> </span>
+                                                <span class="">United States</span><span class="float-right text-dark">78%</span>
+                                            </li>
+                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ca" title="ca" id="ca"></i></span><span class="">Canada</span><span class="float-right text-dark">7%</span>
+                                            </li>
+                                            <li class="list-group-item country-sales-content"><span class="mr-2"><i class="flag-icon flag-icon-ru" title="ru" id="ru"></i></span><span class="">Russia</span><span class="float-right text-dark">4%</span>
+                                            </li>
+                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-in" title="in" id="in"></i></span><span class="">India</span><span class="float-right text-dark">80%</span>
+                                            </li>
+                                            <li class="list-group-item country-sales-content"><span class=" mr-2"><i class="flag-icon flag-icon-fr" title="fr" id="fr"></i></span><span class="">France</span><span class="float-right text-dark">16%</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer text-center">
+                                        <a href="#" class="btn-primary-link">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ============================================================== -->
+                            <!-- end sales traffice country source  -->
+                            <!-- ============================================================== -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            All rights reserved. Dashboard by <a href="https://colorlib.com/wp/">MULTI-STATE CO-OPERATIVE SOCIETIES</a>.
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="text-md-right footer-links d-none d-sm-block">
+                                <a href="javascript: void(0);">About</a>
+                                <a href="javascript: void(0);">Support</a>
+                                <a href="javascript: void(0);">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end footer -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- end wrapper  -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="assets/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+</body>
+ 
+</html>
